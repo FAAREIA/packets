@@ -1,3 +1,2 @@
-# Welcome to ALFA, a custom CSS framework
+Packets
 
-[Read the documentation](https://github.com/FAAREIA/ALFA/wiki)
