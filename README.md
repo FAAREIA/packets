@@ -8,6 +8,7 @@
 ### Details
 * Custom CSS with grids and variables.
 * Responsive
+* JS imports and Classes
 
 ---
 
