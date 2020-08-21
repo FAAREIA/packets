@@ -1,0 +1,41 @@
+.button {
+	background: var(--button--bg, var(--c--pink));
+	block-size: var(--button--bz, 4.4rem);
+	border-radius: var(--bdrs--medium);
+	box-sizing: border-box;
+	color: var(--c--white);
+	display: block;
+	line-height: var(--button--lh, 4.4rem);
+	padding-inline-end: var(--button--pie, 3rem);
+	padding-inline-start: var(--button--pis, 3rem);
+	text-align: center;
+	&.only-border {
+		--button--bg: transparent;
+		border: 0.1rem solid var(--c--white);
+	}
+	&.small {
+		--button--bz: 3.6rem;
+		--button--lh: 3.4rem;
+		--button--pie: 2rem;
+		--button--pis: 2rem;
+		font-size: var(--fz--small);
+	}
+	&:disabled {
+	}
+	&:focus,
+	&:hover {
+	}
+}
+
+.close-button {
+	block-size: null;
+	fill: null;
+	inline-size: null;
+	padding: null;
+	&:focus,
+	&:hover {
+	}
+	svg {
+		pointer-events: none;
+	}
+}

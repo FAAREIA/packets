@@ -1,0 +1,64 @@
+#search-bar {
+    --form-control--pis: 4.4rem;
+    .label-input {
+        color: var(--c--white);
+        display: block;
+        opacity: var(--i-search-bar--o, 0.7);
+        position: relative;
+        text-transform: uppercase;
+        transition: opacity 0.2s ease;
+        &::before {
+            background: var(--c--lime);
+            block-size: 0.2rem;
+            bottom: -0.4rem;
+            content: "";
+            left: 0;
+            opacity: var(--i-search-bar--o, 0);
+            position: absolute;
+            right: 0;
+            transition: inherit;
+        }
+    }
+    input:checked + .label-input,
+    .label-input.active,
+    .label-input:focus,
+    .label-input:hover {
+        --i-search-bar--o: 1;
+    }
+    .search {
+        display: flex;
+        margin-block-start: 1rem;
+        position: relative;
+        .button {
+            flex: 0 0 auto;
+        }
+        .form-control {
+            flex: 1 1 auto;
+
+        }
+        .icon {
+            display: inline-block;
+            inline-size: 1.6rem;
+        }
+        label {
+            block-size: var(--form-control--pis);
+            inline-size: var(--form-control--pis);
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            text-align: center;
+            top: 0;
+        }
+    }
+    .with-input {
+        font-size: var(--fz--small);
+        padding-block-end: 0.6rem;
+        padding-block-start: 0.6rem;
+        + .with-input {
+            margin-inline-start: 2rem;
+        }
+    }
+    input[type="radio"] {
+        display: none;
+    }
+}

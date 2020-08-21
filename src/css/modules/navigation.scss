@@ -1,0 +1,20 @@
+#nav {
+	.menu {
+		display: flex;
+	}
+	a {
+		color: white;
+		display: block;
+		padding-block-end: var(--i-nav--pbe, 1.2rem);
+		padding-block-start: var(--i-nav--pbs, 1.2rem);
+		padding-inline-end: 1rem;
+		padding-inline-start: 1rem;
+	}
+}
+
+@media (max-height: 29.99em) {
+	#nav {
+		--i-nav--pbe: 0.4rem;
+		--i-nav--pbs: 0.4rem;
+	}
+}

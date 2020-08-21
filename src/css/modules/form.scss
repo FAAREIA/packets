@@ -1,0 +1,42 @@
+.form-control {
+	background: var(--form-control--bg, white);
+	block-size: var(--form-control--bsz, 4.4rem);
+	border: 0;
+	border-radius: var(--bdrs--medium);
+	box-sizing: border-box;
+	color: var(--form-control--c, var(--c--text));
+	line-height: var(--form-control--lh, 4.4rem);
+	padding-inline-end: var(--form-control--pie, 1.2rem);
+	padding-inline-start: var(--form-control--pis, 1.2rem);
+	&:disabled {
+		--form-control_placeholder--c: "inherit";
+	}
+	&:focus,
+	&:focus-within {
+	}
+	&::placeholder {
+		color: var(--form-control_placeholder--c, var(--c--gray));
+	}
+}
+
+.form-group {
+	display: flex;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	&:checked {
+	}
+	&:enabled {
+		cursor: pointer;
+	}
+	&:indeterminate {
+	}
+}
+
+label {
+	&.with-input,
+	&[for] {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,72 @@
+.modal-images {
+	background: rgba(255, 255, 255, 0.9);
+	block-size: 100%;
+	display: none;
+	grid-template:	"..... ....... close" minmax(2rem, 4rem)
+					".....  content ...." 1fr
+					"..... ....... ....." minmax(2rem, 4rem)
+					/ minmax(2rem, 4rem) 1fr minmax(2rem, 4rem);
+	inline-size: 100%;
+	left: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	z-index: var(--z--modal);
+	&.open {
+		display: grid;
+	}
+	.close-button {
+		block-size: 5rem;
+		fill: var(--c--text);
+		grid-area: close;
+		inline-size: 5rem;
+		justify-self: end;
+		line-height: 2;
+		overflow: hidden;
+		padding: 1.5rem;
+		z-index: var(--z--content);
+	}
+	.content {
+		box-sizing: border-box;
+		grid-area: content;
+		inline-size: 100%;
+		max-block-size: calc(100vh - 4rem);
+		overflow: hidden;
+		place-self: center;
+	}
+	.images {
+		display: grid;
+		.current {
+			z-index: 1;
+		}
+		.next,
+		.previous {
+			opacity: 0;
+		}
+		li {
+			grid-area: 1 / 1;
+		}
+	}
+	.nav {
+		bottom: 0;
+		fill: var(--c--text);
+		inline-size: 4rem;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		&:hover {
+			fill: var(--c--blue);
+		}
+		svg {
+			filter: drop-shadow(0 0 1rem var(--slideshow--nav--ft, var(--c--white)));
+			inline-size: 2rem;
+		}
+	}
+	.next {
+		right: 0;
+	}
+	.prev {
+		left: 0;
+	}
+}

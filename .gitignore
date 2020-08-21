@@ -1,0 +1,4 @@
+.firebase/
+.git/
+node_modules/
+public/

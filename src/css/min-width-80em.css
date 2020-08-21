@@ -1,0 +1,58 @@
+:root {
+  --gd--columns: 12;
+}
+
+#burger,
+#search {
+  display: none;
+}
+
+#header {
+  --i-header--cg: 5rem;
+  --i-header--gta: "logo nav  user"
+  				 "form form form";
+  --i-header--gtc: auto 1fr auto;
+}
+
+#nav {
+  --i-nav--pbe: 0.6rem;
+  --i-nav--pbs: 0.6rem;
+  grid-area: nav;
+}
+
+#search-bar {
+  margin-block-start: 1rem;
+  grid-area: form;
+}
+#search-bar .search .button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+#search-bar .search .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#user-login {
+  grid-area: user;
+}
+
+.grid {
+  --grid--gtc: minmax(0, 1fr) [content-start] repeat(var(--gd--columns), var(--gd--column-width)) [content-end] minmax(0, 1fr);
+}
+
+.packets {
+  --packets--gta: "messg messg messg messg messg messg messg messg    messg    messg    messg    messg    messg    messg"
+                          "slide slide slide slide slide slide slide header   header   header   header   header   header   ....."
+                          "slide slide slide slide slide slide slide details  details  details  details  details  details  ....."
+                          "slide slide slide slide slide slide slide includes includes includes includes includes includes ....."
+                          "slide slide slide slide slide slide slide date     date     date     disc     disc     disc     ....."
+  					 "slide slide slide slide slide slide slide button   button   button   ........ ........ ........ .....";
+  --packets--includes--t-dd--iz: 25%;
+  --packets--lowest-price-badge--size: 10.4rem;
+}
+.packets .button {
+  margin-inline-end: calc(0rem - var(--packets--discount-price--mie));
+}
+
+/*# sourceMappingURL=min-width-80em.css.map */
