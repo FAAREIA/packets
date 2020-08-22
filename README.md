@@ -5,9 +5,11 @@
 ---
 
 ### Details
-* Custom CSS with grids and variables.
+* Must be viewed in latest browsers
+* Custom CSS with grids and variables
 * Responsive
 * JS imports and Classes
+* Use of latest CSS properties, like `inline-size` instead of `width`
 
 ---
 
